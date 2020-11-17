@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listen and Speak</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div id="header">
+      <h1 id="title">Listen and Speak</h1>
+      <h2 id="sub-title">A simple way to practice vocab</h2>
+    </div>
+
+    <div id="main">
+      <div id="ui-top">
+        <div id="instructions"></div>
+      </div>
+      <div id="practice-col">
+        <div id="practice-ui">
+          <button class="hidden skip" id="skip">
+            <i class="fas fa-chevron-circle-right"></i>
+          </button>
+        </div>
+        <div id="points" class="hidden">
+          Points: <span id="points-num"></span>
+        </div>
+      </div>
+
+      <audio src="/sound/busDing.wav" id="speak-ding"></audio>
+      <div id="grid"></div>
+      <form id="form-1" action="">
+        <label for="wordlists">Choose Word Set:</label>
+        <select name="word-lists" id="word-lists">
+          <!-- <option value="">(select)</option> -->
+          <option value="choose" selected disabled>(Choose List)</option>
+          <option value="0">Sweet 16 verbs in sentences</option>
+          <option value="1">Sweet 16 verbs, infinitives</option>
+          <option value="2">Top 30 Nouns</option>
+          <option value="3">Top 20 Adjectives</option>
+          <option value="4">Top 20 Prepositions & articles</option>
+          <option value="5">Pronouns & Question Words</option>
+        </select>
+
+        <label for="order-select">Word order:</label>
+        <select name="order-select" id="order-select">
+          <option value="choose" selected disabled>(Choose Order)</option>
+          <option value="random">Random</option>
+          <option value="list-order">List Order</option>
+        </select>
+
+        <label for="practice-lang">I'll say it in:</label>
+        <select name="practice-lang" id="practice-lang">
+          <option value="choose" selected disabled>(Choose Language)</option>
+          <option value="en-US">My Native Language</option>
+          <option value="es-MX">My Target Language</option>
+        </select>
+      </form>
+      <button id="start-practice">Start practice!</button>
+      <button id="view-list">View Selected List</button>
+      <button id="create-list">Create Word List</button>
+    </div>
+
+    <!-- todo: dynamic date script here -->
+    <footer>©2020 Jaron Kunkel</footer>
+    <script type="module" src="/scripts/main.js"></script>
+  </body>
+</html>

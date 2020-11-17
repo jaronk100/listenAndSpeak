@@ -1,0 +1,33 @@
+{
+  "name": "listen-and-speak-game",
+  "version": "1.0.0",
+  "description": "Simple vocab practice",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaronk100/listenAndSpeak.git"
+  },
+  "author": "Jaron Kunkel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaronk100/listenAndSpeak/issues"
+  },
+  "homepage": "https://github.com/jaronk100/listenAndSpeak#readme",
+  "dependencies": {
+    "aws-sdk": "^2.776.0",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.0",
+    "mongodb": "^3.6.2",
+    "mongoose": "^5.10.9",
+    "multer": "^1.4.2",
+    "nodemon": "^2.0.6",
+    "uuid": "^8.3.1"
+  }
+}

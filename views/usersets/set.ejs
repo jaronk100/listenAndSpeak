@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Sets</title>
+</head>
+<body>
+    <div id="set">
+        <% let terms = set.terms; %>
+        <a href="/sets/<%= set._id %> ">Set Name: <%= set.name %></a>
+        <% for (let i = 0; i < terms.length; i++) { %>            
+        <div class="targetPhrase">
+            <p><%= set.targetLanguage%>: <%= set.terms[i].targetLangText %></p>
+        </div>
+        <div class="nativePhrase">
+            <p><%= set.nativeLanguage %>: <%= set.terms[i].nativeLangText %></p>
+        </div>
+        <% }%>
+    </div>
+</body>
+</html>

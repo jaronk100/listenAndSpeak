@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="/sets" method="POST" name="create-set-form" id="create-set-form" class="hidden">
+      <!-- Hard code language selects and options, or generate them dynamically from objects? -->
+
+      <label for="name">Name of set:</label>
+      <input type="text" name="name" />
+      <label for="nativeLanguage">Your Native Language:</label>
+      <input type="text" name="nativeLanguage" />
+      <label for="targetLanguage">The language you're learning:</label>
+      <select type="text" name="targetLanguage">
+        <option value="Spanish">Spanish</option>
+        <option value="French">French</option>
+        <option value="German">German</option>
+      </select>  
+      <div id="descr">
+        <label for="descr">Description:</label>
+        <textarea name="descr" id="descr" cols="30" rows="10" form="create-set-form"></textarea>
+      </div>   
+      <div id="terms">
+        <label for="learnText0">Word or phrase you want to learn:</label>
+        <input type="text" name="learnText0" />
+        <label for="nativeText0">How it's said in your 1st language:</label>
+        <input type="text" name="nativeText0" />
+        <button id="add-terms">Add Terms</button>
+        <button id="submit">Submit</button>
+      </div>
+    </form>
+    <!-- Script to create more fields if user wants to add more terms -->
+    <script type="module" src="/scripts/create-set.js"></script>
+  </body>
+  
+</html>
