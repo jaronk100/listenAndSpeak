@@ -4,7 +4,6 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const port = 5000;
 const Set = require('./models/set');
-const expressUpload = require('express-fileupload');
 
 const app = express();
 
@@ -21,8 +20,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/play', (req, res) => {
-  res.render('main/index');
+app.get('/play', async (req, res) => {
+  const sets = await Set.find().sort({createdAt: 'desc'});
+  res.render('main/index', {sets: sets});
 })
 
 //Get the form to create a set
